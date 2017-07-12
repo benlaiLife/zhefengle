@@ -73,7 +73,9 @@ export default {
 #tab  li a i{    position: relative;height: 1.2rem;line-height: 1.2rem;display: inline-block;width: 1.5rem;font-size: 1rem;color: #666;margin-top: .1rem;}
 #tab .active_btn a i{color: #e61128;}
 #tab .active_btn a p{color: #e61128;}
-#tab  li a img{    margin-bottom: .15rem;width: 2.05rem;height: 2.05rem;    left: .85rem; top: -0.8rem;position: absolute;}
+#tab  li a img{    width: 2.05rem;
+    height: 2.05rem;
+    margin-top: -0.8rem;}
 #tab  li a p{font-size: .55rem;position: relative; z-index: 9;}
-#tab  li a .tab_group{margin-top: 1.23rem;}
+#tab  li a .tab_group{margin-top: -0.26rem;}
 </style>
