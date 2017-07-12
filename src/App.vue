@@ -63,19 +63,16 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
-#tab{width:100%;height:2.5rem;position:fixed;bottom:0;border-top: 1px solid #eee;}
+#tab{width:100%;height:2.5rem;position:fixed;bottom:0;border-top: 1px solid #eee;z-index: 1000;background: white;}
 #tab>ul{width:100%;height:100%}
 #tab li{float:left;width:20%;height:100%;text-align:center;font-size: .55rem;}
 #tab  li a{position: relative;height: 100%;font-size: .85rem;width:100%;color: #82757d;float: left;vertical-align: top;padding-top: .1rem;}
 #tab  li a i{    position: relative;height: 1.2rem;line-height: 1.2rem;display: inline-block;width: 1.5rem;font-size: 1rem;color: #666;margin-top: .1rem;}
 #tab .active_btn a i{color: #e61128;}
 #tab .active_btn a p{color: #e61128;}
-#tab  li a img{    width: 2.05rem;
-    height: 2.05rem;
-    margin-top: -0.8rem;}
+#tab  li a img{    width: 2.05rem;height: 2.05rem;margin-top: -0.8rem;}
 #tab  li a p{font-size: .55rem;position: relative; z-index: 9;}
 #tab  li a .tab_group{margin-top: -0.26rem;}
 </style>

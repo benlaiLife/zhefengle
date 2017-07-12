@@ -9,6 +9,9 @@ import Category from './views/Category'
 import Group from './views/Group'
 import Mine from './views/Mine'
 import MostIn from './views/MostIn'
+import Choiceness from './components/group/Choiceness'
+import Topic from './components/group/Topic'
+import Attention from './components/group/Attention'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 Vue.config.productionTip = false
@@ -17,9 +20,15 @@ Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(VueAwesomeSwiper)
 const routes=[
+{path:'',component:Home},
 {path:'/home',component:Home},
 {path:'/category',component:Category},
-{path:'/group',component:Group},
+{path:'/group',component:Group,children:[
+	{path:'',component:Choiceness},
+	{path:'/choiceness',component:Choiceness},
+	{path:'/topic',component:Topic},
+	{path:'/attention',component:Attention},
+]},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
 ]
