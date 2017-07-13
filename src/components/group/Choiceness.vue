@@ -75,7 +75,7 @@
 			}
 		},
 		mounted(){
-			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_boutique.html?apiv=3&biz_channel=&historyRecordId=&page=1&type=1").then(function (res) {
+			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_boutique.html?apiv=3&biz_channel=&historyRecordId=&page=1&token=Ab1GhPwYwirK7xi2-ukFjNQ&type=1").then(function (res) {
 				this.tab=res.body.model.tagList;
 				this.choice=res.body.model.rsList;
 //				console.log(this.choice);

@@ -89,7 +89,7 @@
 			}
 		},
 		mounted(){
-			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_info_show_product.html?apiv=3&biz_channel=&content=&op=1&page=1&spRecordId="+this.$route.query.spRecordId+"&spUserId="+this.$route.query.spUserId+"").then(function (res) {
+			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_info_show_product.html?apiv=3&biz_channel=&callback=angular.callbacks._3&content=&contentTell=%E5%86%99%E8%AF%84%E8%AE%BA...&op=1&page=1&spRecordId="+this.$route.query.spRecordId+"&spUserId="+this.$route.query.spUserId+"&token=Ab1GhPwYwirK7xi2-ukFjNQ&uToken=").then(function (res) {
 				
 				this.userName=res.data.model.userName;
 				this.userAvatar=res.data.model.userAvatar;
@@ -102,7 +102,7 @@
 				this.taglist=res.data.model.tagList;
 				this.zanNum=res.data.model.zanNum;
 				this.id=this.$route.query.spUserId;
-				console.log(this.$route.query.spUserId);
+//				console.log(this.$route.query.spUserId);
 			})
 		}
 	}
