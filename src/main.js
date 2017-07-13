@@ -5,7 +5,14 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import App from './App'
 import Home from './views/Home'
-import Category from './views/Category'
+import Category from './views/Category/Category'
+import Cate from './views/Category/Cate/Cate'
+import Brand from './views/Category/Brand/Brand'
+import Website from './views/Category/Website/Website'
+import All from './views/Category/All/All'
+import Detail from './views/Category/Detail/Detail'
+import Shopdetail from './views/Category/Shopdetail/Shopdetail'
+import Gory from './views/Category/Gory/Gory'
 import Group from './views/Group'
 import Mine from './views/Mine'
 import MostIn from './views/MostIn'
@@ -18,14 +25,40 @@ Vue.use(VueResource)
 Vue.use(VueAwesomeSwiper)
 const routes=[
 {path:'/home',component:Home},
-{path:'/category',component:Category},
+{ path: '/category',
+    component: Category ,
+    children:[
+      { path: '/', component: Cate },
+      { path: '/cate', component: Cate },
+      { path: '/brand', component: Brand },
+      { path: '/website', component: Website },
+    ]
+  },
 {path:'/group',component:Group},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
+{ path: '/All', component: All },
+{ path: '/Detail', component: Detail },
+{ path: '/Shopdetail', component: Shopdetail },
+{ path: '/Gory', component: Gory },
 ]
 
 const router=new VueRouter({
-	routes
+	routes,
+  mode: 'history',
+  scrollBehavior (to, from, savedPosition) {
+    // 如果你的連結是帶 # 這種
+    // to.hash 就會有值(值就是連結)
+    // 例如 #3
+    if (to.hash) {
+      return {
+        // 這個是透過 to.hash 的值來找到對應的元素
+        // 照你的 html 來看是不用多加處理這樣就可以了
+        // 例如你按下 #3 的連結，就會變成 querySelector('#3')，自然會找到 id = 3 的元素
+        selector: to.hash
+      }
+    }
+  }
 })
 /* eslint-disable no-new */
 new Vue({

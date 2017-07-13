@@ -2,31 +2,31 @@
   <div id="app">
     <router-view></router-view>
     <ul id="tab">
-    	<li :class="{active_btn:iscur==0}"@click="iscur=0" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==0}" @click="iscur=0" v-on:click="changeImg()">
     		<router-link to="/home">
     			<i class="iconfont icon-moren_shouye_icon"></i>
     			<p>首页</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==1}"@click="iscur=1" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==1}" @click="iscur=1" v-on:click="changeImg()">
     		<router-link to="/category">
     			<i class="iconfont icon-moren_fenleiicon"></i>
     			<p>分类</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==2}"@click="iscur=2" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==2}" @click="iscur=2" v-on:click="changeImg()">
     		<router-link to="/group">
     			<img :src="imgState"/>
     			<p class="tab_group">菌团</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==3}"@click="iscur=3" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==3}" @click="iscur=3" v-on:click="changeImg()">
     		<router-link to="/mostIn">
     			<i class="iconfont icon-moren_zuiinicon"></i>
     			<p>最In</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==4}"@click="iscur=4" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==4}" @click="iscur=4" v-on:click="changeImg()">
     		<router-link to="/mine">
     			<i class="iconfont icon-wodeicon1"></i>
     			<p>我的</p>
@@ -63,10 +63,10 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
 }
-#tab{width:100%;height:2.5rem;position:fixed;bottom:0;border-top: 1px solid #eee;}
+#tab{width:100%;height:2.5rem;position:fixed;bottom:0;border-top: 1px solid #eee;background: #fff}
 #tab>ul{width:100%;height:100%}
 #tab li{float:left;width:20%;height:100%;text-align:center;font-size: .55rem;}
 #tab  li a{position: relative;height: 100%;font-size: .85rem;width:100%;color: #82757d;float: left;vertical-align: top;padding-top: .1rem;}

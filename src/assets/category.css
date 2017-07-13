@@ -1,0 +1,14 @@
+.tab-main{
+  overflow: hidden;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0 15%;
+}
+.tab-main a{
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  height: 2rem;
+  line-height: 2.2rem;
+  background: #fff;
+  font-size: .7rem;
+}
