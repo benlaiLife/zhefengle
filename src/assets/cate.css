@@ -1,0 +1,91 @@
+.left{
+  width: 4.9rem;
+  background: #f2f2f2;
+  position: fixed;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 3rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  z-index: 0;
+  top: 4rem;
+  margin-left: -187.5px;
+}
+.left li{
+  font-size: .65rem;
+  display: block;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  width: 4.9rem;
+  color: #262626;
+  border-bottom: 1px solid #f5f5f5;
+}
+.right{
+  position: relative;
+  margin-left: 4.9rem;
+  background: #fff;
+  z-index: 0;
+}
+.right ul{
+  z-index: 99;
+  position: relative;
+  padding: 1rem 0;
+}
+.firctcatelink{
+  overflow: hidden;
+  margin-bottom: 1.15rem;
+  margin-right: .5rem;
+  width:100%;
+  display: block;
+}
+.eachcate{
+  float: left;
+  width: 4rem;
+  height: 6rem;
+  text-align: center;
+  margin-left: .5rem;
+}
+.eachcate a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: .6rem;
+  margin-right: .5rem;
+}
+.cate-newimg{
+  display: inline-block;
+  margin-bottom: .25rem;
+  vertical-align: top;
+  max-width: 100%;
+  background: #fff;
+}
+.left-tit{
+  float: left;
+  font-size: .7rem;
+  color: #262626;
+  margin-left: .5rem;
+  width:100%;
+}
+.left-tit i{
+  float: left;
+  background: #262626;
+  width: .1rem;
+  height: .6rem;
+  margin-right: .25rem;
+  margin-top: .05rem;
+}
+.left-tit .span1{
+  float: left;
+  height: .75rem;
+  line-height: .85rem;
+}
+.right-tit{
+  float: right;
+  color: #878787;
+  font-size: .7rem;
+  height: .75rem;
+  line-height: .85rem;
+  margin-right: 1rem;
+}

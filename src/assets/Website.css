@@ -1,0 +1,73 @@
+.brandrow{
+  border-top: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+.ecahbrand{
+  float: left;
+  width: 4.675rem;
+  height: 4.675rem;
+  border-left: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  overflow: hidden;
+}
+.ecahbrand a{
+  width: 4.67rem;
+  height: 4.67rem;
+  background: #fff;
+  display: block;
+}
+.item-img{
+  height: 4.65rem;
+  width: 4.65rem;
+  overflow: hidden;
+  text-align: center;
+  display: table;
+}
+.item-img div{
+  display: table-cell;
+  vertical-align: middle;
+  width: 4.65rem;
+  height: 4.65rem;
+}
+.item-img img{
+  max-height: 4.65rem;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+.shopname{
+  margin: 1rem auto .45rem;
+  font-size: .75rem;
+  background: #f7f7f7;
+  text-align: center;
+  padding: .2rem 0;
+  position: relative;
+}
+.line{
+  background: url(https://cdn.zhefengle.cn/img/ll.jpg) left center repeat-x;
+  width: 9.4rem;
+  margin: 0 auto;
+}
+.name{
+  width: 5rem;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  background: #f7f7f7;
+  color: #999;
+}
+.allbtn{
+  display: block;
+  width: 17.25rem;
+  height: 2.2rem;
+  margin: 2rem auto 0;
+  line-height: 2.2rem;
+  text-align: center;
+  background: #333;
+  font-size: .75rem;
+
+}
+.allbtn a{
+  color: #fff;
+}

@@ -2,31 +2,31 @@
   <div id="app">
     <router-view></router-view>
     <ul id="tab">
-    	<li :class="{active_btn:iscur==0}"@click="iscur=0" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==0}" @click="iscur=0" v-on:click="changeImg()">
     		<router-link to="/home">
     			<i class="iconfont icon-moren_shouye_icon"></i>
     			<p>首页</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==1}"@click="iscur=1" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==1}" @click="iscur=1" v-on:click="changeImg()">
     		<router-link to="/category">
     			<i class="iconfont icon-moren_fenleiicon"></i>
     			<p>分类</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==2}"@click="iscur=2" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==2}" @click="iscur=2" v-on:click="changeImg()">
     		<router-link to="/group">
     			<img :src="imgState"/>
     			<p class="tab_group">菌团</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==3}"@click="iscur=3" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==3}" @click="iscur=3" v-on:click="changeImg()">
     		<router-link to="/mostIn">
     			<i class="iconfont icon-moren_zuiinicon"></i>
     			<p>最In</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==4}"@click="iscur=4" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==4}" @click="iscur=4" v-on:click="changeImg()">
     		<router-link to="/mine">
     			<i class="iconfont icon-wodeicon1"></i>
     			<p>我的</p>
@@ -65,7 +65,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   height: 100%;
-  background:#F3F3F3; 
+  background:#F3F3F3;
 }
 #tab{width:100%;height:2.5rem;position:fixed;bottom:0;border-top: 1px solid #eee;z-index: 1000;background: white;}
 #tab>ul{width:100%;height:100%}
