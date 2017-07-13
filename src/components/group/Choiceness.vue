@@ -1,18 +1,23 @@
 <template>
+	<!--<router-view></router-view>-->
 	<div id="choiceness">
 		<div class="tabList">
 			<div class="tag_box">
 				<ul>
-					<li v-for="item in tab"><a href=""><img :src="item.indexImg" alt="" /></a></li>
+					<li v-for="item in tab">
+						<router-link :to="{path:'/taglist',query:{id:item.tagId}}">
+							<img :src="item.indexImg" alt="" />
+						</router-link>
+					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="content">
 			<div class="choice" v-for="item in choice">
 				<div class="img_box">
-				<a href="">
+				<router-link :to="{path:'/goodsInfo',query:{spRecordId:item.id,spUserId:item.userId}}">
 					<img :src="item.imgUrl[0].url" alt="" />
-				</a>
+				</router-link>
 			</div>
 				<div class="aticle">
 					<div class="aticle_main">
@@ -28,11 +33,31 @@
 				<div class="line"></div>
 				<div class="user_info">
 					<div class="left_user">
-						<a href="">
+						<a href="javascript:void(0)">
 							<img :src="item.userAvatar"/>
 							<span class="username">{{item.userName}}</span>
 						</a>
 					</div>
+					<div class="right_user">
+					<a href="javascript:void(0)">
+						<i class="iconfont icon-moren_zuiinicon"></i>
+						<span>
+							{{item.commentNum}}
+						</span>
+					</a>
+					<a href="javascript:void(0)">
+						<i class="iconfont icon-shoucang"></i>
+						<span>
+							{{item.zanNum}}
+						</span>
+					</a>
+					<a href="javascript:void(0)">
+						<i class="iconfont icon-fenxiang"></i>
+						<span>
+							分享
+						</span>
+					</a>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -53,13 +78,13 @@
 			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_boutique.html?apiv=3&biz_channel=&historyRecordId=&page=1&type=1").then(function (res) {
 				this.tab=res.body.model.tagList;
 				this.choice=res.body.model.rsList;
-				console.log(this.choice);
+//				console.log(this.choice);
 			})
 		}
 	}
 </script>
 
-<style>
+<style scoped="scoped">
 .content{    background: #eee;}
 .tabList{    border-top: 1px solid #eee;padding: .5rem 0;width: 100%;background: #eee;}
 .tag_box{    width: 100%;overflow-x: scroll;}
@@ -81,4 +106,8 @@
 .left_user{    float: left; overflow: hidden;}
 .left_user img{    float: left;width: 1rem;height: 1rem;margin-left: .75rem;margin-right: .25rem;background-size: 100%;display: block;border-radius: 50%;}
 .username{    float: left;line-height: 1.1rem;font-size: .65rem;color: #333;}
+.right_user{ float: right;margin-right: .75rem;}
+.right_user a{overflow: hidden;float: left;height: 1.2rem;margin-left: .7rem; padding-left: .05rem;}
+.right_user a i{float: left;font-size: .8rem;margin-top: .24rem;margin-right: .2rem;color: #999;}
+.right_user a span{float: left;color: #999; font-size: .75rem;margin-top: .23rem;line-height: 1.2rem;}
 </style>
