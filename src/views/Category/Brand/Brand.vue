@@ -20,6 +20,7 @@
         </router-link>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -29,6 +30,7 @@
     data(){
       return{
         arr2:[],
+        scrolled: false,
         num:123
       }
     },
@@ -39,6 +41,14 @@
 //          console.log(res.body.model.aggregationBrands[0].simpleBrandList)
         })
     },
+    methods:{
+      handleScroll () {
+        this.scrolled = window.scrollY > 0;
+      }
+    },
+    ready () {
+      window.addEventListener('scroll', this.handleScroll);
+    }
   }
 </script>
 <style src="../../../assets/Website.css"></style>

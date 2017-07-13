@@ -26,7 +26,7 @@ export default {
   	return {
 		swiperOption: {  
         loop:true,
-        notNextTick: true,  
+//      notNextTick: true,  
         pagination: '.swiper-pagination',   
         centeredSlides: true,  
         paginationClickable: true,  
@@ -34,7 +34,7 @@ export default {
         autoplay:1000,
 		mousewheelControl:true,
 		observeParents:true,
-        autoplayDisableOnInteraction:false
+//      autoplayDisableOnInteraction:false
        }
   	}
   }
