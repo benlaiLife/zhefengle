@@ -9,8 +9,12 @@ import Category from './views/Category'
 import Group from './views/Group'
 import Mine from './views/Mine'
 import MostIn from './views/MostIn'
+import Person from './views/Person'
+import Setting from './views/Setting'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import Validator from 'vue-validator'
 
+Vue.use(Validator)
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
@@ -22,6 +26,8 @@ const routes=[
 {path:'/group',component:Group},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
+{path:'/person',component:Person},
+{path:'/Setting',component:Setting}
 ]
 
 const router=new VueRouter({

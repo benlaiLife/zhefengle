@@ -28,16 +28,16 @@ export default {
 
 }
 </script>
-<style type="text/css" src="./assets/reset.css">
-	
-</style>
+
+<style type="text/css" src="./assets/reset.css"></style>
 <style scoped="scoped">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  height: 100%;
+  background:#F3F3F3; 
 }
 #tab{width:100%;height:10%;position:fixed;bottom:0}
 #tab>ul{width:100%;height:100%}
