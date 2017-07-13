@@ -9,14 +9,18 @@ import Category from './views/Category'
 import Group from './views/Group'
 import Mine from './views/Mine'
 import MostIn from './views/MostIn'
+import Person from './views/Person'
+import Setting from './views/Setting'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import Validator from 'vue-validator'
 import Choiceness from './components/group/Choiceness'
 import Topic from './components/group/Topic'
 import Attention from './components/group/Attention'
 import Taglist from'./components/group/Taglist'
 import GoodsInfo from'./components/group/GoodsInfo'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
 import UserInfo from './views/UserInfo'
 
+Vue.use(Validator)
 Vue.config.productionTip = false
 
 Vue.use(VueRouter)
@@ -37,6 +41,8 @@ const routes=[
 ]},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
+{path:'/person',component:Person},
+{path:'/Setting',component:Setting}
 ]
 
 const router=new VueRouter({
