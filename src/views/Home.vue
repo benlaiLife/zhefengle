@@ -19,7 +19,6 @@ export default {
     mounted(){
     	this.$http.get('./static/toutiao.json').then(function (res) {
     		this.arr1=res.data.result.data;
-    		console.log(res.data.result.data);
     	});
     }
 	}
