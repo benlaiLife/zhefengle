@@ -26,13 +26,16 @@ import Attention from './components/group/Attention'
 import Taglist from'./components/group/Taglist'
 import GoodsInfo from'./components/group/GoodsInfo'
 import UserInfo from './views/UserInfo'
+import Article from './views/Article'
+import CategoryList from './views/CategoryList'
+
 
 Vue.use(Validator)
 Vue.config.productionTip = false
-
 Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(VueAwesomeSwiper)
+
 const routes=[
 {path:'',component:Home},
 {path:'/home',component:Home},
@@ -47,11 +50,13 @@ const routes=[
   },
 {path:'/group',component:Group},
 {path:'/mine',component:Mine},
+{path:'/categoryList',component:CategoryList},
+{path:'/Article',component:Article},
 {path:'/mostIn',component:MostIn},
-{ path: '/All', component: All },
-{ path: '/Detail', component: Detail },
-{ path: '/Shopdetail', component: Shopdetail },
-{ path: '/Gory', component: Gory },
+{path: '/All', component: All },
+{path: '/Detail', component: Detail},
+{path: '/Shopdetail', component: Shopdetail},
+{path: '/Gory', component: Gory },
 {path:'/userInfo',component:UserInfo},
 {path:'/group',component:Group,children:[
 	{path:'',component:Choiceness},

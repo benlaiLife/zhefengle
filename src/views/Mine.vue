@@ -55,16 +55,20 @@
 			login:function(){
 				this.$http.get('static/user.json').then(function(res){
 					var arr = res.body.users;
+					var flag = false;
 					for(var i=0;i<arr.length;i++){
 						if(this.user===arr[i].username&&this.pwd===arr[i].password){
+							flag=true;
 							localStorage.setItem('isLogin','true');
         					this.$router.push({path:'/home'});
-						}else{
-							alert("登录失败");
+        					break;
 						}
 					}
+					if(!flag){
+						alert("登录失败!");
+					}
 				})
-			},		
+			}	
 		}
 
   	}
