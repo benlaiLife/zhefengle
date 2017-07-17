@@ -18,6 +18,12 @@
 				<router-link :to="{path:'/goodsInfo',query:{spRecordId:item.id,spUserId:item.userId}}">
 					<img :src="item.imgUrl[0].url" alt="" />
 				</router-link>
+				<div class="tag_shop" v-if="item.shareList[0]">
+					<a href="">
+						<i class="iconfont icon-gouwuche"></i>
+						<span class="goods_name">{{item.shareList[0].itemTitle}}</span>
+					</a>
+				</div>
 			</div>
 				<div class="aticle">
 					<div class="aticle_main">
@@ -78,7 +84,8 @@
 			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_boutique.html?apiv=3&biz_channel=&historyRecordId=&page=1&token=Ab1GhPwYwirK7xi2-ukFjNQ&type=1").then(function (res) {
 				this.tab=res.body.model.tagList;
 				this.choice=res.body.model.rsList;
-//				console.log(this.choice);
+//				this.shop=res.body.model.rsList.[8].shareList
+				console.log(this.choice);
 			})
 		}
 	}
@@ -110,4 +117,15 @@
 .right_user a{overflow: hidden;float: left;height: 1.2rem;margin-left: .7rem; padding-left: .05rem;}
 .right_user a i{float: left;font-size: .8rem;margin-top: .24rem;margin-right: .2rem;color: #999;}
 .right_user a span{float: left;color: #999; font-size: .75rem;margin-top: .23rem;line-height: 1.2rem;}
+.tag_shop{position: absolute;left: 154.1px;top: 134px;}
+.tag_shop a{    display: inline-block;font-size: .6rem;color: #333;background: rgba(255,255,255,.8);padding: 0 .5rem; height: 1.1rem;line-height: 1.1rem;border-radius: .875rem;}
+.tag_shop a i{    float: left;font-size: .65rem!important;margin-right: .2rem;margin-top: -.05rem;}
+.goods_name{    max-width: 4.1rem;float: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;}
 </style>
