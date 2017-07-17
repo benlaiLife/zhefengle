@@ -3,10 +3,10 @@
     <div class="type-list">
       <div class="sort-row">
         <ul class="sorts">
-          <li><a href="javascript:void(0)">综合</a></li>
-          <li><a href="javascript:void(0)">折扣</a></li>
-          <li><a href="javascript:void(0)">价格</a></li>
-          <li><a href="javascript:void(0)">筛选</a></li>
+          <li @click="back()"><a href="javascript:void(0)">综合</a></li>
+          <li @click="back()"><a href="javascript:void(0)">折扣</a></li>
+          <li @click="back()"><a href="javascript:void(0)">价格</a></li>
+          <li @click="back()"><a href="javascript:void(0)">筛选</a></li>
         </ul>
       </div>
     </div>
@@ -59,7 +59,7 @@
     </div>
     <div class="submit-lay">
       <router-link :to="{ path:'/gory', query: {min:this.min, max: this.max,bb:2} }">
-      <a href="" class="submit">确定</a>
+      <a href="javascript:viod(0)" class="submit">确定</a>
       </router-link>
     </div>
   </div>
@@ -84,10 +84,11 @@
     mounted(){
       this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_condition.html?activeIndex=0&biz_channel=&discountOrder=-1&firstCate=0&keyword=&maxPrice=0&minPrice=0&priceOrder=-1&secondCate="+this.$route.query.cade+"&sex=0&typeName=")
         .then(function (res) {
+        	console.log(res);
           this.arry=res.body.model.brandList;
           this.price=res.body.model.priceList;
           this.sex=res.body.model.sexList;
-          console.log(res);
+          
         });
 
     },
@@ -101,7 +102,10 @@
         this.min=g;
         this.max=h;
         this.iscur1=j;
-      }
+      },
+      back:function () {
+        window.history.go(-1)
+      },
     }
   }
 </script>
