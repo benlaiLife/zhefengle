@@ -316,7 +316,7 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  z-index: 999;
+  z-index: 10222;
   width: 18.75rem;
   margin-left: -9.375rem;
   height: auto;
@@ -349,7 +349,7 @@
 }
 .detail-buy .detail-left a p {
   color: #999;
-  line-height: .5rem;
+  line-height: 2.5rem;
 }
 .detail-buy .lay-detailbuy {
   overflow: hidden;
@@ -381,4 +381,19 @@
 }
 .detail-buy-info .add-shop-own {
   display: inline-block;
+}
+.imgss{
+  width:100%;
+}
+.imgss>img{
+  width:100%;
+}
+.one{
+  width:100%;
+  background: #fff;
+}
+.one>img{
+  margin:0 auto;
+  display: block;
+  width:50%;
 }

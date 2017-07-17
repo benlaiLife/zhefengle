@@ -23,6 +23,9 @@
 </script>
 <style src="../../assets/category.css"></style>
 <style>
+  #category{
+    background: #fff;
+  }
   .active_btn a{
     color:#e61128
   }

@@ -12,6 +12,7 @@ import Website from './views/Category/Website/Website'
 import All from './views/Category/All/All'
 import Detail from './views/Category/Detail/Detail'
 import Shopdetail from './views/Category/Shopdetail/Shopdetail'
+import Screen from './views/Category/Screen/Screen'
 import Gory from './views/Category/Gory/Gory'
 import Group from './views/Group'
 import Mine from './views/Mine'
@@ -26,7 +27,8 @@ import Attention from './components/group/Attention'
 import Taglist from'./components/group/Taglist'
 import GoodsInfo from'./components/group/GoodsInfo'
 import UserInfo from './views/UserInfo'
-
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller)
 Vue.use(Validator)
 Vue.config.productionTip = false
 
@@ -64,7 +66,8 @@ const routes=[
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
 {path:'/person',component:Person},
-{path:'/Setting',component:Setting}
+{path:'/Setting',component:Setting},
+{path:'/Screen',component:Screen}
 ]
 
 const router=new VueRouter({

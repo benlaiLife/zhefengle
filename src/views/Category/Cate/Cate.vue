@@ -18,7 +18,7 @@
               </div>
             </a>
             <div v-for="a in items.childCategories" class="eachcate">
-              <router-link :to="{ path:'/gory', query: { id2: a.childCategoryId,name:a.name} }">
+              <router-link :to="{ path:'/gory', query: {first:items.categoryId, id2: a.childCategoryId,name:a.name} }">
                 <img :src="a.img" alt="" class="cate-newimg">
                 <p>{{a.name}}</p>
               </router-link>
