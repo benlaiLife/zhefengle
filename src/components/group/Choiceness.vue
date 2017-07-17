@@ -12,6 +12,9 @@
 				</ul>
 			</div>
 		</div>
+		<scroller 
+              :on-infinite="infinite"
+              style="padding-top: 44px;">
 		<div class="content">
 			<div class="choice" v-for="item in choice">
 				<div class="img_box">
@@ -68,7 +71,7 @@
 				</div>
 			</div>
 		</div>
-
+	</scroller>
 	</div>
 </template>
 
@@ -78,16 +81,35 @@
 		data(){
 			return{
 				tab:{},
-				choice:{}
+				choice:[],
+				page:"",
+				p:""
 			}
 		},
 		mounted(){
+			this.p=1;
 			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_boutique.html?apiv=3&biz_channel=&historyRecordId=&page=1&token=Ab1GhPwYwirK7xi2-ukFjNQ&type=1").then(function (res) {
 				this.tab=res.body.model.tagList;
 				this.choice=res.body.model.rsList;
 //				this.shop=res.body.model.rsList.[8].shareList
 //				console.log(this.choice);
 			})
+		},
+		methods:{
+			   infinite: function (done) {
+        this.p++;
+//      console.log(this.p,this.page);
+	           this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_boutique.html?apiv=3&biz_channel=&historyRecordId=254402&page="+this.p+"&token=Ab7BOikvTx8GHgQSEBB-W0c&type=1")
+	             .then(function (mes) {
+	               var self = this
+	               setTimeout(function () {
+	                 for (var i = 1; i <  20; i++) {
+	                   self.choice.push(mes.body.model.rsList[i]);
+	                 }
+	                 done();
+	               }, 1500)
+	             });
+      }
 		}
 	}
 </script>
