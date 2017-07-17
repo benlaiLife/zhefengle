@@ -28,6 +28,7 @@ import Taglist from'./components/group/Taglist'
 import GoodsInfo from'./components/group/GoodsInfo'
 import TopicChild from'./components/group/TopicChild'
 import UserInfo from './views/UserInfo'
+import Fans from './views/Fans'
 import VueScroller from 'vue-scroller'
 Vue.use(VueScroller)
 Vue.use(Validator)
@@ -66,7 +67,8 @@ const routes=[
 {path:'/mostIn',component:MostIn},
 {path:'/person',component:Person},
 {path:'/Setting',component:Setting},
-{path:'/Screen',component:Screen}
+{path:'/Screen',component:Screen},
+{path:'/fans',component:Fans},
 ]
 
 const router=new VueRouter({

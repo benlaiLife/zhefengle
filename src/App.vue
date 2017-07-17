@@ -2,25 +2,25 @@
   <div id="app">
     <router-view></router-view>
     <ul id="tab">
-    	<li :class="{active_btn:iscur==0}" @click="iscur=0" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==0}" @click="iscur=0" v-on:click="changeImg(0)">
     		<router-link to="/home">
     			<i class="iconfont icon-moren_shouye_icon"></i>
     			<p>首页</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==1}" @click="iscur=1" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==1}" @click="iscur=1" v-on:click="changeImg(1)">
     		<router-link to="/category">
     			<i class="iconfont icon-moren_fenleiicon"></i>
     			<p>分类</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==2}" @click="iscur=2" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==2}" @click="iscur=2" v-on:click="changeImg(2)">
     		<router-link to="/group">
     			<img :src="imgState"/>
     			<p class="tab_group">菌团</p>
     		</router-link>
     	</li>
-    	<li :class="{active_btn:iscur==3}" @click="iscur=3" v-on:click="changeImg()">
+    	<li :class="{active_btn:iscur==3}" @click="iscur=3" v-on:click="changeImg(3)">
     		<router-link to="/mostIn">
     			<i class="iconfont icon-moren_zuiinicon"></i>
     			<p>最In</p>
@@ -42,13 +42,24 @@ export default {
   name: 'app',
 	data(){
 		return{
-			iscur:0,
+			iscur:localStorage.num,
 			imgState:"http://img.zhefengle.com/ca7151b676a709b0f9660eac0a274fa5.png"
 		}
 	},
+	mounted(){
+		if(!localStorage.num){
+			localStorage.num=0;
+		}
+		if(localStorage.num==2){
+				this.imgState="http://img.zhefengle.com/3956d9c44bc8e0093428314d0763dab2.png";
+			}else{
+				this.imgState="http://img.zhefengle.com/ca7151b676a709b0f9660eac0a274fa5.png";
+			}
+	},
 	methods:{
-		changeImg :function  () {
-			if(this.iscur==2){
+		changeImg :function  (n) {
+			localStorage.num=n;
+			if(localStorage.num==2){
 				this.imgState="http://img.zhefengle.com/3956d9c44bc8e0093428314d0763dab2.png";
 			}else{
 				this.imgState="http://img.zhefengle.com/ca7151b676a709b0f9660eac0a274fa5.png";

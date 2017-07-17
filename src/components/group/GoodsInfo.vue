@@ -102,7 +102,7 @@
 				this.taglist=res.data.model.tagList;
 				this.zanNum=res.data.model.zanNum;
 				this.id=this.$route.query.spUserId;
-//				console.log(res);
+//				console.log(res.data.model);
 			})
 		}
 	}
