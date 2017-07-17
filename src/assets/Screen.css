@@ -1,0 +1,146 @@
+.active_btn1 a{
+  color:#e61128;
+  background: #fff;
+  display: block;
+}
+.type-list .sort-row {
+  position: relative;
+  z-index: 999;
+}
+.type-list .sorts {
+  z-index: 999;
+  background: #fff;
+  max-width: 750px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.type-list .sorts, .type-list .sorts a {
+  position: relative;
+}
+.type-list .sorts li {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 25%;
+}
+.type-list .sorts li a {
+  font-size: .75rem;
+  display: block;
+  text-align: center;
+  line-height: 1.5rem;
+  padding: .25rem 0;
+  /*border-bottom: 1px solid #ececec;*/
+  height: 2rem;
+}
+#screen{
+  height:100%;
+}
+.right{
+  height:100%;
+}
+.type-hot{
+  margin-top:0
+}
+.filter-price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  overflow-y: auto;
+}
+.filter-price .price-title {
+  display: block;
+  color: #888;
+  font-size: .75rem;
+  margin: .52rem 5% 0;
+}
+.filter-price .begin-price, .filter-price .end-price {
+  padding: .25rem 0;
+  font-size: .75rem;
+  background: 0 0;
+  width: 40%;
+  outline: 0;
+  color: #666;
+  border: 1px solid #ddd;
+  height: 2.5rem;
+}
+.filter-price .begin-price {
+  margin: .52rem 5% 0;
+  border-radius: 3px;
+  text-align: center;
+}
+.filter-price .tilde {
+  position: absolute;
+  left: 50%;
+  top: 2.8rem;
+  margin-left: -.3rem;
+}
+.filter-price .end-price {
+  margin: .52rem 3% 0;
+  border-radius: 3px;
+  text-align: center;
+}
+.filter-price a {
+  display: inline-block;
+  width: 40%;
+  margin: .52rem 5% 0;
+  background: #f1f0f0;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #888;
+  border-radius: 3px;
+  border: 1px solid #f1f0f0;
+}
+.type-sort {
+  position: absolute;
+  right: -1.5rem;
+  top: 0;
+  padding-top: 0;
+  width: 1.5rem;
+}
+.type-sort {
+  position: fixed;
+  background: #f2f2f2;
+  height: 100%;
+  width: .75rem;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  padding-top: 1.25rem;
+}
+.type-sort ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: .9rem 0 2.5rem;
+}
+.filter-price  .btn a{
+  background: #fff;
+  border-color: #e61128;
+}
+.submit-lay {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 2.5rem;
+  width:100%;
+  z-index:9999;
+}
+.submit{
+  display: block;
+  text-align: center;
+  height:2.5rem;
+  line-height: 2.5rem;
+  color: #fff;
+  font-size: .85rem;
+  background: #e50039;
+  border: none;
+  width: 100%;
+}

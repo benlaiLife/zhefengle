@@ -13,17 +13,17 @@
 		</div>
 		<div class="group_tab">
 			<ul>
-				<li :class="{active_li:liState==1}"@click="liState=1">
+				<li :class="{active_li:liState==1}"@click="liState=1,groupTab(1)">
 					<router-link to="/choiceness" href="javascript:void(0)">
 						<span>精选</span>
 					</router-link>
 				</li>
-				<li :class="{active_li:liState==2}"@click="liState=2">
+				<li :class="{active_li:liState==2}"@click="liState=2,groupTab(2)">
 					<router-link to="/topic" href="javascript:void(0)">
 						<span>话题</span>
 					</router-link>
 				</li>
-				<li :class="{active_li:liState==3}"@click="liState=3">
+				<li :class="{active_li:liState==3}"@click="liState=3,groupTab(3)">
 					<router-link to="/attention" href="javascript:void(0)">
 						<span>关注</span>
 					</router-link>
@@ -38,7 +38,15 @@
 		name:'group',
 		data(){
 			return {
-				liState:1
+				liState:localStorage.groupNum
+			}
+		},mounted(){
+		if(!localStorage.groupNum){
+			localStorage.groupNum=0;
+		}
+		},methods:{
+			groupTab:function (num) {
+					localStorage.groupNum=num;
 			}
 		}
 	}

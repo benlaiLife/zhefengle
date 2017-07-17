@@ -8,8 +8,8 @@
 
     <div>
       <swiper :options="swiperOption"  ref="mySwiper" class='swiper'>
-        <swiper-slide v-for="item1 in arr5" class="swiper-slide">
-          <img :src="item1.itemDetailImgUrls" alt="">
+        <swiper-slide v-for="item1 in arr5.groupItems" class="swiper-slide one">
+          <img :src="item1.imgUrl" alt="">
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
@@ -19,7 +19,7 @@
       <div class="detail-info">
         <div class="price-lay">
           <span class="price">
-            {{arr5.itemCurPrice}}
+            ￥{{arr5.itemCurPrice}}
             <s class="consult">{{arr5.itemOriPrice}}</s>
           </span>
           <span v-for="a in arr5.attributeList" class="item-discount-btn">{{a.text}}</span>
@@ -62,6 +62,7 @@
       </div>
     </div>
 
+
     <div class="platform-promise">
       <div class="base-height detail-row-hd">
         <div class="left-tit">{{arr5.shopInfo.commitmentInfo.title}}</div>
@@ -70,6 +71,12 @@
       <div class="img">
           <img :src="arr5.shopInfo.commitmentInfo.imgUrl" alt="">
       </div>
+    </div>
+
+
+
+    <div v-for="img in arr4" class="imgss">
+      <img :src="img" alt="">
     </div>
     <div>
       <div class="htlist detail-list">
@@ -118,7 +125,7 @@
           <span></span>
         </div>
         <div class="lay-detailbuy detail-buy-info">
-          <button class="add-shop-own">加入购物车</button>
+          <button class="add-shop-own" @click="submit">加入购物车</button>
           <button>立即购买</button>
         </div>
       </div>
@@ -134,7 +141,7 @@
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   export default {
     name: 'detail',
-    components: {
+    components:{
       swiper,
       swiperSlide
     },
@@ -142,6 +149,7 @@
       return{
         arr5:"",
         arr6:[],
+        arr4:[],
         iscur:"",
         swiperOption: {
           loop:true,
@@ -160,22 +168,60 @@
     mounted(){
       this.$http.jsonp("https://h5api.zhefengle.cn/item/item_detail.html?apiv=9&biz_channel=&shareId="+this.$route.query.id1)
         .then(function (res) {
-          this.arr5=res.body.model
+          this.arr5=res.body.model;
         }),
       this.$http.jsonp("https://h5api.zhefengle.cn/item/item_more_detail.html?biz_channel=&page=1&shareId="+this.$route.query.id1)
         .then(function (mes) {
-          this.arr6=mes.body.model
+          this.arr6=mes.body.model;
+          this.arr4=mes.body.model.recommendReasonImg;
+
         })
     },
     methods:{
       back:function () {
         window.history.go(-1)
       },
+      submit:function(){
+      	if(!window.localStorage){
+                    alert("浏览器支持localstorage");
+                    return false;
+                }else{
+                    var obj2 = JSON.parse(localStorage.getItem('aaaa'));
+                    //如果之前错过东西,那么这个obj就不为空,就直接往obj里面添加新的键值对
+                    if(obj2){
+                        //如果当前要存的值已经存过了,只需要加数量就行
+                        if(obj2[a.product_id]){
+                            obj2[a.product_id].num=b;
+                            obj2[a.product_id].title=c;
+                            obj2[a.product_id].img=a1;
+                            obj2[a.product_id].price=d;
+                            obj2[a.product_id].color=e;
+
+                        }else{
+                            a.num = 1;
+                            obj2[a.product_id] = a;
+                            obj2[a.product_id].num=b;
+                            obj2[a.product_id].title=c;
+                            obj2[a.product_id].img=a1;
+                            obj2[a.product_id].price=d;
+                            obj2[a.product_id].color=e;
+                        }
+                    }else{
+                        //如果obj是空的,就证明这是第一次存值,就要新建一个obj
+                        obj2 = {};
+                        a.num = 1;
+                        obj2[a.product_id] = a;
+                    }
+                    console.log(obj2);
+                    localStorage.setItem('aaaa',JSON.stringify(obj2));
+                }
+      }
     }
   }
 </script>
 <style src="../../../assets/Shopdetail.css"></style>
 <style>
+
   .active_btn a{
     border-bottom: .1rem solid #e50039;
     display: inline-block;

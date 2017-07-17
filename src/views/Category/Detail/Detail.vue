@@ -2,7 +2,7 @@
   <div id="detail">
     <div class="title">
       <div class="left">
-        <a href="javascript:void(0)" @click="back()">&lt;</a>
+        <a href="javascript:void(0)" @click="back()">&lt;{{this.$route.query.id6}}</a>
       </div>
     </div>
     <div :style='"background: url("+arr3.mainImg+") left top no-repeat rgb(255, 255, 255)"' class="brandshop-info">
@@ -69,8 +69,6 @@
     mounted(){
       this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?biz_channel=&maskKey="+this.$route.query.num+"&page=1&secondCate=")
         .then(function (res) {
-//            console.log(res);
-//          console.log(res.body.model.searchList);
           this.arr3=res.body.model.bannerIntroduce;
           this.arr4=res.body.model.searchList
         })
@@ -81,14 +79,14 @@
       },
       change:function (a,b,c,d,e,f,g) {
           if(this.$route.query.num1==1){
-            this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?activeIndex="+a+"&biz_channel=&brandId="+this.$route.query.id6+"&discountOrder="+b+"&keyword=&limit=16&maskKey=s@@1qT@@m@@3@@&maxPrice="+c+"&minPrice="+d+"&page=1&priceOrder="+e+"&sex="+f+"&shopId=&typeName=")
+            this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?activeIndex="+a+"&biz_channel=&brandId="+this.$route.query.id6+"&discountOrder="+b+"&keyword=&limit=16&maskKey="+this.$route.query.num+"&maxPrice="+c+"&minPrice="+d+"&page=1&priceOrder="+e+"&sex="+f+"&shopId=&typeName=")
               .then(function (res) {
                 this.iscur=g,
                   console.log(res);
                 this.arr4=res.body.model.searchList
               })
           }else{
-            this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?activeIndex="+a+"&biz_channel=&brandId=&discountOrder="+b+"&keyword=&limit=16&maskKey=s@@1qT@@m@@3@@&maxPrice="+c+"&minPrice="+d+"&page=1&priceOrder="+e+"&sex="+f+"&shopId="+this.$route.query.id7+"&typeName=")
+            this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?activeIndex="+a+"&biz_channel=&brandId=&discountOrder="+b+"&keyword=&limit=16&maskKey="+this.$route.query.num+"&maxPrice="+c+"&minPrice="+d+"&page=1&priceOrder="+e+"&sex="+f+"&shopId="+this.$route.query.id7+"&typeName=")
               .then(function (res) {
                 this.iscur=g,
                   console.log(res);

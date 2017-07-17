@@ -25,7 +25,7 @@
 		},
 		mounted(){
 			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/topic_list.html?apiv=3&biz_channel=&historyRecordId=&page=1").then(function (res) {
-				console.log(res.body.model.topicList);
+//				console.log(res.body.model.topicList);
 				this.data=res.body.model.topicList;
 			})
 		}
