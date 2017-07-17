@@ -2,7 +2,7 @@
   <div id="detail">
     <div class="title">
       <div class="left">
-        <a href="javascript:void(0)" @click="back()">&lt;{{this.$route.query.id6}}</a>
+        <a href="javascript:void(0)" @click="back()">&lt;{{this.$route.query.num}}</a>
       </div>
     </div>
     <div :style='"background: url("+arr3.mainImg+") left top no-repeat rgb(255, 255, 255)"' class="brandshop-info">

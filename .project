@@ -10,13 +10,19 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>com.pandora.projects.ui.MKeyBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.pandora.projects.ui.MKeyNature</nature>
 		<nature>com.aptana.projects.webnature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1499781531602</id>
+			<id>1499829429041</id>
 			<name></name>
 			<type>26</type>
 			<matcher>

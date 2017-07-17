@@ -20,6 +20,7 @@ import MostIn from './views/MostIn'
 import Person from './views/Person'
 import Setting from './views/Setting'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import BannerTo from './views/BannerTo'
 import Validator from 'vue-validator'
 import Choiceness from './components/group/Choiceness'
 import Topic from './components/group/Topic'
@@ -77,6 +78,7 @@ const routes=[
 ]},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
+{path:'/bannerTo',component:BannerTo},
 {path:'/person',component:Person},
 {path:'/Setting',component:Setting},
 {path:'/Screen',component:Screen},
