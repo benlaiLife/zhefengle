@@ -1,0 +1,399 @@
+.detail-list {
+  padding-bottom: .25rem;
+  border-top: 10px solid #f2f2f2;
+}
+.htlist {
+  font-size: 0;
+  padding-bottom: 3rem;
+  background: #fff;
+}
+.detail-list, .details-lay .advantage-lay img {
+  margin-top: .5rem;
+}
+.likeimg {
+  display: block;
+  width: 100%;
+}
+.htlist ul {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  overflow: hidden;
+}
+.htlist li {
+  position: relative;
+  vertical-align: top;
+  width: 8.625rem;
+  border: 1px solid #f5f5f5;
+  border-radius: .1rem;
+  float: left;
+  text-align: center;
+  margin-left: .5rem;
+  margin-top: .4rem;
+}
+.htlist li .list-out-lay {
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  height: 266.25px;
+}
+.htlist li .list-out-lay .list-out-img {
+  display: table-cell;
+  vertical-align: middle;
+}
+.htlist li .img-list {
+  max-width: 100%;
+  display: inline-block;
+}
+.htlist .main {
+  padding: 0 .5rem .7rem;
+  text-align: left;
+}
+.htlist .main-title, .htlist h4 {
+  font-size: .6rem;
+  color: #444;
+  font-weight: 400;
+  height: 1.6rem;
+  margin-bottom: .45rem;
+  line-height: initial;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.htlist .price {
+  color: #fff;
+  font-size: .7rem;
+  height: 1rem;
+  line-height: 1rem;
+  overflow: hidden;
+  margin-bottom: .5rem;
+}
+.htlist li .left4 {
+  float: left;
+  color: #DF001B;
+  font-size: .75rem;
+}
+.htlist li .right4 {
+  box-sizing: border-box;
+  float: right;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #E40039;
+  vertical-align: top;
+  width: 3.6rem;
+  height: .7rem;
+  font-size: 0;
+  margin-top: .15rem;
+}
+.htlist li .right .sale {
+  background: #E40039;
+  color: #fff;
+  width: 50%;
+  margin-left: -2px;
+}
+.htlist li .right .money, .htlist li .right .sale {
+  text-align: center;
+  display: inline-block;
+  line-height: .7rem;
+  vertical-align: top;
+  font-size: .5rem;
+}
+.htlist li .right .money {
+  background: #fff;
+  color: #e61128;
+  width: 49%;
+  height: .9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: line-through;
+}
+.htlist li .right .money, .htlist li .right .sale {
+  text-align: center;
+  display: inline-block;
+  line-height: .7rem;
+  vertical-align: top;
+  font-size: .5rem;
+}
+.htlist li p {
+  line-height: .75rem;
+  color: #878787;
+  font-size: .55rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.htlist .icon-qudaotubiao {
+  height: .5rem;
+  width: .775rem;
+  border-radius: .05rem;
+  display: initial;
+  margin-top: .125rem;
+}
+.icon-qudaotubiao {
+  vertical-align: top;
+  margin-right: .25rem;
+}
+
+
+.price-details {
+  background: #fff;
+  margin-bottom: .5rem;
+}
+.detail-info {
+  padding: 0 .25rem;
+  text-align: center;
+}
+.price-lay {
+  position: relative;
+  padding-top: .35rem;
+  vertical-align: middle;
+}
+.price-details .details-title {
+  padding: .3rem .5rem .25rem;
+  overflow: hidden;
+  color: #333;
+  font-weight: 400;
+  height: auto;
+  text-align: center;
+}
+.price-lay .price {
+  font-size: .9rem;
+  color: #e61128;
+  line-height: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.price-lay .consult {
+  font-size: .6rem;
+  color: #999;
+  margin-left: .35rem;
+  margin-right: .5rem;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 1.9rem;
+}
+.item-discount-btn {
+  color: #fff;
+  padding: .1rem .2rem .05rem;
+  background: red;
+  display: inline-block;
+  line-height: initial;
+  font-size: .5rem;
+  margin-right: .25rem;
+  vertical-align: middle;
+  border-radius: .1rem;
+}
+.details-title .title-text {
+  line-height: 1.1rem;
+  font-size: .7rem;
+  display: block;
+  padding: .25rem 0;
+  vertical-align: middle;
+}
+.details-title .title-text-new {
+  border-top: 1px solid #f5f5f5;
+  line-height: .85rem;
+  font-size: .7rem;
+  display: block;
+  padding: .75rem 0;
+  vertical-align: middle;
+  color: #999;
+}
+.shop-box {
+  background: #fff;
+}
+.detail-row-hd {
+  overflow: hidden;
+  width: 17.75rem;
+  margin: 0 auto;
+  border-bottom: 1px solid #f5f5f5;
+  height: 2.2rem;
+  line-height: 2.2rem;
+}
+.left-tit {
+  float: left;
+  font-weight: 400;
+}
+ .shop-box .detail-row-hd .left-tit .country-img {
+  float: left;
+  margin-top: .34rem;
+  margin-right: .25rem;
+  border-radius: .75rem;
+}
+.shop-box .detail-row-hd .left-tit .name-act-box {
+  float: left;
+  line-height: initial;
+}
+.shop-box .detail-row-hd .left-tit .country-img img {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: .75rem;
+}
+.shop-box .detail-row-hd .left-tit .name-act-box .shop-name.maxTop {
+  height: 2.2rem;
+  line-height: 2.3rem;
+}
+.shop-box .detail-row-hd .left-tit .name-act-box .shop-name {
+  font-size: .7rem;
+  color: #333;
+}
+.detail-row-hd .right-btn {
+  float: right;
+  color: #999;
+  font-size: .7rem;
+}
+.left-bd-tit {
+  float: left;
+  font-size: .7rem;
+  color: #333;
+  width: 3rem;
+  text-indent: .5rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+}
+.shop-bd-row {
+  overflow: hidden;
+}
+.shop-bd-row .left-bd-tit {
+  float: left;
+  font-size: .7rem;
+  color: #333;
+  width: 3rem;
+  text-indent: .5rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+}
+.shop-bd-row .right-bd-info {
+  float: left;
+  color: #999;
+  font-size: .7rem;
+  width: 15.25rem;
+  overflow: hidden;
+}
+.shop-bd-row .right-bd-info .single-row {
+  height: 2.2rem;
+  line-height: 2.3rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.shop-bd-row .right-bd-info .single-row a {
+  color: #999;
+}
+ .main-text {
+  float: left;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 14rem;
+  list-style: disc inside;
+}
+.shop-bd-row .right-bd-info .iconzfl {
+  float: right;
+  color: #999;
+  font-size: .6rem;
+}
+ .platform-promise {
+  background: #fff;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+ .detail-row-hd.base-height {
+  height: 2.2rem;
+  line-height: 2.2rem;
+}
+.detail-row-hd .left-tit {
+  float: left;
+  font-weight: 400;
+}
+.img img{
+  width:100%;
+}
+
+.detail-buy-lay {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 10222;
+  width: 18.75rem;
+  margin-left: -9.375rem;
+  height: auto;
+  border-top: 1px solid #eaeaea;
+}
+.detail-buy {
+  max-width: 18.75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  line-height: 2.225rem;
+  height: 2.225rem;
+  background: #fff;
+  text-align: right;
+}
+.detail-buy .detail-left {
+  float: left;
+  font-size: .7rem;
+  height: 100%;
+  overflow: hidden;
+}
+.detail-buy .detail-left a {
+  float: left;
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 3.75rem;
+  text-align: center;
+  line-height: 1.6rem;
+  font-size: .45rem;
+}
+.detail-buy .detail-left a p {
+  color: #999;
+  line-height: 2.5rem;
+}
+.detail-buy .lay-detailbuy {
+  overflow: hidden;
+  margin-top: 0;
+}
+.detail-buy-info, .to-app-lay .to-app, .top-load {
+  text-align: center;
+}
+.detail-buy .detail-buy-info {
+  float: right;
+  margin-top: .05rem;
+}
+.detail-buy .lay-detailbuy .add-shop-own {
+  background: #333;
+  color: #fff;
+}
+.detail-buy .lay-detailbuy button {
+  margin: 0;
+  padding: 0;
+  width: 5.5rem;
+  float: left;
+  border: none;
+  background: #e61128;
+  font-size: .7rem;
+  color: #fff;
+  height: 2.425rem;
+  line-height: 2.4rem;
+  border-radius: 0;
+}
+.detail-buy-info .add-shop-own {
+  display: inline-block;
+}
+.imgss{
+  width:100%;
+}
+.imgss>img{
+  width:100%;
+}
+.one{
+  width:100%;
+  background: #fff;
+}
+.one>img{
+  margin:0 auto;
+  display: block;
+  width:50%;
+}

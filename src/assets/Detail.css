@@ -1,0 +1,189 @@
+.title{
+  height: 2.2rem;
+  line-height: 2.2rem;
+  z-index: 999;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.title .left {
+  position: absolute;
+  text-align: left;
+  font-size: .7rem;
+  color: #333;
+  min-width: .75rem;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.title .left a {
+  display: block;
+  padding: 0 .5rem;
+}
+.brandshop-info {
+  background-size: 100%!important;
+  margin-top: -2.5rem;
+}
+.brandshop-info .shopbox .shophd {
+  padding-top: 6.5rem;
+  overflow: hidden;
+  margin-bottom: .5rem;
+}
+.brandshop-info .shopbox .shopbd {
+  padding: 0 .5rem .55rem;
+  line-height: 150%;
+  font-size: .65rem;
+  color: #747474;
+}
+.brandshop-info .shopbox .shophd .leftimg {
+  width: 3.425rem;
+  height: 3.425rem;
+  float: left;
+  border: 1px solid #ddd;
+  margin-left: .5rem;
+  margin-right: .55rem;
+  background: #fff;
+}
+.brandshop-info .shopbox .shophd .rightname {
+  width: 13.9rem;
+}
+.brandshop-info .shopbox .shophd .rightname .name {
+  font-size: .75rem;
+  color: #333;
+  margin-top: .8rem;
+  line-height: .8rem;
+  display: block;
+}
+.brandshop-info .shopbox .shophd .rightname .sales {
+  font-size: .6rem;
+  color: #959595;
+  margin-top: .35rem;
+  display: block;
+}
+.brandshop-info .shopbox .shophd .leftimg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.type-list .sort-row {
+  position: relative;
+  z-index: 999;
+}
+.type-list .sorts {
+  z-index: 999;
+  background: #fff;
+  max-width: 750px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.type-list .sorts, .type-list .sorts a {
+  position: relative;
+}
+.type-list .sorts li {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 25%;
+}
+.type-list .sorts li a {
+  font-size: .75rem;
+  display: block;
+  text-align: center;
+  line-height: 1.5rem;
+  padding: .25rem 0;
+  /*border-bottom: 1px solid #ececec;*/
+  height: 2rem;
+}
+.htlist {
+  font-size: 0;
+  padding-bottom: 3rem;
+  background: #fff;
+  padding-top:88px;
+}
+.htlist ul {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  overflow: hidden;
+}
+.htlist li {
+  position: relative;
+  vertical-align: top;
+  width: 8.625rem;
+  border: 1px solid #f5f5f5;
+  border-radius: .1rem;
+  float: left;
+  text-align: center;
+  margin-left: .5rem;
+  margin-top: .4rem;
+}
+.htlist .list-item {
+  display: block;
+  background: #fff;
+  text-align: center;
+  border-radius: .1rem;
+}
+.htlist li .list-out-lay {
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  height: 266.25px;
+}
+.htlist li .list-out-lay .list-out-img {
+  display: table-cell;
+  vertical-align: middle;
+}
+.htlist li .img-list {
+  max-width: 100%;
+  display: inline-block;
+}
+.htlist .main {
+  padding: 0 .5rem .7rem;
+  text-align: left;
+}
+.htlist .main-title, .htlist h4 {
+  font-size: .6rem;
+  color: #444;
+  font-weight: 400;
+  height: 1.6rem;
+  margin-bottom: .45rem;
+  line-height: initial;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.htlist .price {
+  color: #fff;
+  font-size: .7rem;
+  height: 1rem;
+  line-height: 1rem;
+  overflow: hidden;
+  margin-bottom: .5rem;
+}
+.htlist li .left1 {
+  float: left;
+  color: #DF001B;
+  font-size: .75rem;
+}
+.htlist li p {
+  line-height: .75rem;
+  color: #878787;
+  font-size: .55rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.htlist .icon-qudaotubiao {
+  height: .5rem;
+  width: .775rem;
+  border-radius: .05rem;
+  display: initial;
+  margin-top: .125rem;
+}
+.icon-qudaotubiao {
+  vertical-align: top;
+  margin-right: .25rem;
+}

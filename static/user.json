@@ -1,0 +1,32 @@
+{
+    "users": [
+        {
+            "id" : 1,
+            "username": "13971239797",
+            "password": "123456",
+            "nickname": "zhangyingyu",
+            "avatar": "http://cdn.aixifan.com/dotnet/20120923/style/image/avatar.jpg"
+        },
+        {
+            "id" : 2,
+            "username": "11111111111",
+            "password": "123456",
+            "nickname": "zhujianghong",
+             "avatar": "http://cdn.aixifan.com/dotnet/20120923/style/image/avatar.jpg"
+        },
+        {
+            "id": 3,
+            "username": "22222222222",
+            "password": "123456",
+            "nickname": "liudong",
+            "avatar": "http://cdn.aixifan.com/dotnet/20120923/style/image/avatar.jpg"
+        },
+        {
+            "id": 4,
+            "username": "33333333333",
+            "password": "123456",
+            "nickname": "zhangsiwei",
+            "avatar": "http://cdn.aixifan.com/dotnet/20120923/style/image/avatar.jpg"
+        }
+    ]    
+}

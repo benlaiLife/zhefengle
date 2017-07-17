@@ -41,11 +41,12 @@ export default {
     		this.arr7=res.body.model.tabInfos['20'].modules[6].list;
     		this.arr={arr2:this.arr2,arr3:this.arr3,arr4:this.arr4,arr5:this.arr5};
     		this.obj={arr6:this.arr6,arr7:this.arr7}
-    		console.log(res);
+//  		console.log(res);
 //  		console.log(this.arr1);
-    	});
-    }
+ 
+    })
 	}
+   }
 
 </script>
 <style type="text/css">
