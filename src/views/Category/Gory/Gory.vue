@@ -80,6 +80,16 @@
             this.items.push(res.body.model.searchList[i]);
           }
         });
+      }else if(this.$route.query.bb==0){
+      	this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?biz_channel=&keyword="+this.$route.query.name+"&limit=16&maskKey=&page=1")
+        .then(function (res) {
+          this.arr3=res.body.model.bannerIntroduce;
+          this.arr4=res.body.model.searchList;
+          this.page=res.body.model.totalPage;
+          for (var i = 0; i < 16; i++) {
+            this.items.push(res.body.model.searchList[i]);
+          }
+        });
       }
       this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?biz_channel=&firstCate="+this.$route.query.first+"&limit=16&page=1&secondCate="+this.$route.query.id2)
         .then(function (res) {
