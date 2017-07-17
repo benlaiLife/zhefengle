@@ -1,7 +1,7 @@
 <template>
 	<div id="topic">
 		<div class="topic_content" v-for="item in data">
-			<a href="javascript:void(0)">
+			<router-link :to="{path:'/topicChild',query:{topicId:item.topicId}}">
 				<img :src="item.topicImgUrl"/>
 				<div class="topic_des">
 					<div class="topic_des_cont">{{item.topicDesc}}</div>
@@ -10,7 +10,7 @@
 					<span class="left">{{item.topicName}}</span>
 					<span class="right">已参与{{item.participants}}</span>
 				</div>
-			</a>
+			</router-link>
 		</div>
 	</div>
 </template>

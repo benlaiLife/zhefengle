@@ -26,6 +26,7 @@ import Topic from './components/group/Topic'
 import Attention from './components/group/Attention'
 import Taglist from'./components/group/Taglist'
 import GoodsInfo from'./components/group/GoodsInfo'
+import TopicChild from'./components/group/TopicChild'
 import UserInfo from './views/UserInfo'
 import VueScroller from 'vue-scroller'
 Vue.use(VueScroller)
@@ -47,9 +48,6 @@ const routes=[
       { path: '/website', component: Website },
     ]
   },
-{path:'/group',component:Group},
-{path:'/mine',component:Mine},
-{path:'/mostIn',component:MostIn},
 { path: '/All', component: All },
 { path: '/Detail', component: Detail },
 { path: '/Shopdetail', component: Shopdetail },
@@ -62,6 +60,7 @@ const routes=[
 	{path:'/attention',component:Attention},
 	{path:'/taglist',component:Taglist},
 	{path:'/goodsInfo',component:GoodsInfo},
+	{path:'/topicChild',component:TopicChild},
 ]},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
