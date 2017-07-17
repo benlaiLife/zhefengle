@@ -25,18 +25,18 @@
 					</div>
 				</div>
 				<p class="tag">
-						<a href="" v-if="item.tagList">
+						<router-link :to="{path:'/taglist',query:{id:item.tagList[0].tagId}}" v-if="item.tagList">
 							<img src="../../assets/imgs/arrow.jpg"/>
 							<span >{{item.tagList[0].tagName}}</span>
-						</a>
+						</router-link>
 					</p>
 				<div class="line"></div>
 				<div class="user_info">
 					<div class="left_user">
-						<a href="javascript:void(0)">
+						<router-link :to="{path:'/userInfo',query:{userNum:item.userId}}">
 							<img :src="item.userAvatar"/>
 							<span class="username">{{item.userName}}</span>
-						</a>
+						</router-link>
 					</div>
 					<div class="right_user">
 					<a href="javascript:void(0)">
@@ -78,7 +78,7 @@
 			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_boutique.html?apiv=3&biz_channel=&historyRecordId=&page=1&token=Ab1GhPwYwirK7xi2-ukFjNQ&type=1").then(function (res) {
 				this.tab=res.body.model.tagList;
 				this.choice=res.body.model.rsList;
-				console.log(this.choice);
+//				console.log(this.choice);
 			})
 		}
 	}

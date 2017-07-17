@@ -89,7 +89,7 @@
 			}
 		},
 		mounted(){
-			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_info_show_product.html?apiv=3&biz_channel=&callback=angular.callbacks._3&content=&contentTell=%E5%86%99%E8%AF%84%E8%AE%BA...&op=1&page=1&spRecordId="+this.$route.query.spRecordId+"&spUserId="+this.$route.query.spUserId+"&token=Ab1GhPwYwirK7xi2-ukFjNQ&uToken=").then(function (res) {
+			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_info_show_product.html?apiv=3&biz_channel=&content=&contentTell=%E5%86%99%E8%AF%84%E8%AE%BA...&op=1&page=1&spRecordId="+this.$route.query.spRecordId+"&spUserId="+this.$route.query.spUserId+"&token=Ab1GhPwYwirK7xi2-ukFjNQ&uToken=").then(function (res) {
 				
 				this.userName=res.data.model.userName;
 				this.userAvatar=res.data.model.userAvatar;
@@ -102,13 +102,13 @@
 				this.taglist=res.data.model.tagList;
 				this.zanNum=res.data.model.zanNum;
 				this.id=this.$route.query.spUserId;
-//				console.log(this.$route.query.spUserId);
+//				console.log(res);
 			})
 		}
 	}
 </script>
 
-<style scoped="scoped">
+<style>
 #goodsInfo{width: 100%;position: absolute;background: white;top: 0;z-index: 10001;min-height:33.3rem ;}
 .taglist_head{    height: 2.2rem; line-height: 2.2rem;z-index: 999;background: #fff;border-bottom: 1px solid #eee;}
 .taglist_head a{float: left;    display: block;padding: 0 .5rem;}

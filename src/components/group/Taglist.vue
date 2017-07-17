@@ -7,7 +7,7 @@
 	<div class="shoplist">
 		<div class="shop_goods" v-for="item in info">
 			<div class="img_box">
-				<a href=""><img :src="item.imgUrl[0].url" alt="" /></a>
+				<router-link :to="{path:'/goodsInfo',query:{spRecordId:item.id,spUserId:item.userId}}"><img :src="item.imgUrl[0].url" alt="" /></router-link>
 			</div>
 			<div class="content_box">
 				<div class="content_des">
@@ -68,7 +68,8 @@
 			}
 		},
 		mounted(){
-			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_search_tag.html?apiv=3&biz_channel=&historyRecordId=&page=1&tagId="+this.$route.query.id+"&type=3").then(function (res) {
+			this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/get_show_product_for_search_tag.html?apiv=3&biz_channel=&historyRecordId=&page=1&tagId="+this.$route.query.id+"&token=Ab1GhPwYwirK7xi2-ukFjNQ&type=3").then(function (res) {
+				
 				this.name=res.data.model.tagName;
 				this.info=res.data.model.rsList;
 //				console.log(res.data.model.rsList);

@@ -43,13 +43,14 @@
 		}
 	}
 </script>
-<style type="text/css">
+<style type="text/css" >
 .group_head{height: 100%;overflow: hidden;padding: 0 3rem;font-size: .7rem;font-weight: 400;text-align: center;color: #333;position: relative;height: 2.2rem; line-height: 2.2rem;z-index: 999;background: #fff; border-bottom: 1px solid #eee;}
 .head_right{right: 0;top: 0;text-align: right;background: 0 0; border: none;padding: 0 .5rem;position: absolute;color: #333;min-width: .75rem;height: 100%;}
 .head_right i{position: relative;margin-left: .4rem; height: 100%;display: inline-block;color: #999;font-size: 1.1rem;}
 .group_tab{overflow: hidden;}
-.group_tab ul li{width: 6.25rem; float: left; height: 2rem;line-height: 2rem;}
+.group_tab ul li{width: 33.33%; float: left; height: 2rem;line-height: 2rem;    background: white;}
 .group_tab ul li a{display: block;text-align: center;font-size: .8rem;color: #333;}
 .group_tab ul li span{height: 2rem;line-height: 2rem;display: inline-block;}
 .group_tab ul  .active_li span{color: #E31E32;    border-bottom: 1px solid #E31E32;}
+#tab{display: block;}
 </style>
