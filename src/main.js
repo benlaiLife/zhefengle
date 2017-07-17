@@ -10,6 +10,7 @@ import Group from './views/Group'
 import Mine from './views/Mine'
 import MostIn from './views/MostIn'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import BannerTo from './views/BannerTo'
 
 Vue.config.productionTip = false
 
@@ -22,6 +23,7 @@ const routes=[
 {path:'/group',component:Group},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
+{path:'/bannerTo',component:BannerTo},
 ]
 
 const router=new VueRouter({
