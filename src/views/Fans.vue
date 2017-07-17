@@ -32,12 +32,12 @@
 			if(this.$route.query.care=="他的好友"){
 				this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/user_rel.html?biz_channel=&op=10&page=1&targetUserId="+this.$route.query.userNum+"&token=Ab7BOikvTx8GHgQSEBB-W0c&total=1").then(function (res) {
 				this.data=res.data.model.list;
-				console.log(res.data.model.list);
+//				console.log(res.data.model.list);
 			})
 			}else if(this.$route.query.care=="他的粉丝"){
 				this.$http.jsonp("https://h5api.zhefengle.cn/meiquan/user_rel.html?biz_channel=&op=11&page=1&targetUserId="+this.$route.query.userNum+"&token=Ab7BOikvTx8GHgQSEBB-W0c&total=1").then(function (res) {
 				this.data=res.data.model.list;
-				console.log(res.data.model.list);
+//				console.log(res.data.model.list);
 			})
 			}
 			
@@ -51,7 +51,7 @@
 </script>
 
 <style>
-#fans{min-height: 33.3rem;padding-bottom: 1.5rem;z-index: 10000;background: #EEEEEE;}
+#fans{min-height: 33.3rem;padding-bottom: 1.5rem;z-index: 10000;background: #EEEEEE;position: relative;}
 .taglist_head{    height: 2.2rem; line-height: 2.2rem;z-index: 999;background: #fff;border-bottom: 1px solid #eee;}
 .taglist_head a{float: left;    display: block;padding: 0 .5rem;}
 .taglist_head a i{    position: relative;margin-left: .4rem; height: 100%;display: inline-block;color: #999;font-size: 1.1rem;}
