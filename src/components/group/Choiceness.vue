@@ -14,7 +14,7 @@
 		</div>
 		<scroller 
               :on-infinite="infinite"
-              style="padding-top: 8rem;">
+              style="margin-top: 8rem;">
 		<div class="content">
 			<div class="choice" v-for="item in choice">
 				<div class="img_box">
