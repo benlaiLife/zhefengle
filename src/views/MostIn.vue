@@ -18,8 +18,12 @@
 					</li>
 				</ul>
 			</div>
+			<scroller :on-refresh="refresh"
+              		:on-infinite="infinite"
+             		 style="padding-top: 6.2rem;">
 			<div class="order_list">
 				<ul>
+					
 					<li v-for="item in detail" class="detail_li">
 						<router-link :to="{path:'/Article',query:{id:item.id}}">
 							<div class="item_wrap clearfix">
@@ -36,8 +40,10 @@
 							</div>
 						</router-link>
 					</li>
+					
 				</ul>
 			</div>
+			</scroller>
 		</div>
 	</div>
 </template>
@@ -48,14 +54,37 @@
 		data() {
 			return {
 				categoryList: {},
-				detail: {}
+				detail:[],
+				p:"",
+				page:"",
+				id:"",
+				len:""
 			}
 		},
 		mounted() {
 			this.$http.jsonp("https://h5api.zhefengle.cn/goodvalue/index_choice.html?apiv=3&biz_channel=&historyRecordId=0&limit=8&page=1&token=AT3B06AFlIz-TYGLUSLDl9k&type=1&typeName=").then(function(res) {
 				this.categoryList = res.body.model.categoryList;
 				this.detail = res.body.model.list;
+				this.len = res.body.model.list.length;
+				this.id= res.body.model.list[0].id;
 			})
+		},
+		methods:{
+			 refresh: function (done) {
+
+      		},
+			infinite:function(done){
+				this.p++;
+				this.$http.jsonp("https://h5api.zhefengle.cn/goodvalue/index_choice.html?apiv=3&biz_channel=&historyRecordId="+this.id+"&limit=8&page="+this.p+"&token=AT3B06AFlIz-TYGLUSLDl9k&type=1&typeName=").then(function(res){
+					var self = this;
+					setTimeout(function () {
+		                 for (var i = 1; i < self.len; i++) {
+		                   self.detail.push(res.body.model.list[i]);
+		                 }
+		                 done();
+		             }, 1500)
+				})
+			}
 		}
 	}
 </script>
@@ -72,7 +101,7 @@
 		position: relative;
 		height: 2.2rem;
 		line-height: 2.2rem;
-		z-index: 999;
+		z-index: 1;
 		background: #fff;
 		border-bottom: 1px solid #eee;
 	}
@@ -102,7 +131,6 @@
 	.wrapper {
 		width: 100%;
 		padding-bottom: 1.5rem;
-		margin-top: .025rem;
 	}
 	
 	.category {
@@ -110,6 +138,8 @@
 		overflow-x: scroll;
 		width: 100%;
 		background: #fff;
+		position: relative;
+		z-index: 1;
 	}
 	
 	.category ul {

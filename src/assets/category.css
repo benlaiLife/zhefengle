@@ -2,6 +2,11 @@
   overflow: hidden;
   border-bottom: 1px solid #f5f5f5;
   padding: 0 15%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background: #fff;
 }
 .tab-main a{
   width: 33.33%;
@@ -11,4 +16,5 @@
   line-height: 2.2rem;
   background: #fff;
   font-size: .7rem;
+  display: block;
 }

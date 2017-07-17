@@ -17,7 +17,7 @@
       <ul v-for="item1 in arr3">
         <li class="hot-title seffixed" :id="item1.key"><h1>{{item1.key}}</h1></li>
         <li v-for="item2 in item1.innerPOJOs" class="botFix">
-          <router-link :to="{ path:'/detail', query: { id: item2.brandId,num:item2.maskKey} }">
+          <router-link :to="{ path:'/detail', query: {num1:1, id6: item2.brandId,num:item2.maskKey} }">
             <img :src="item2.brandImg" alt="" class="img-lay">
             <span>{{item2.brandName}}</span>
           </router-link>

@@ -4,10 +4,13 @@
 			<a href="JavaScript:history.back(-1)" class="left"><i class="fa fa-angle-left" aria-hidden="true" ref="icon"></i></a>
 			<h1 class="main">{{this.$route.query.type}}</h1>
 		</div>
+		<scroller :on-refresh="refresh"
+              		:on-infinite="infinite"
+             		 style="padding-top: 2.2rem;">
 		<div class="order_list">
-			<ul>
+			<ul>			
 				<li v-for="item in detail" class="detail_li">
-					<router-link to="/home">
+						<router-link :to="{path:'/Article',query:{id:item.id}}">
 						<div class="item_wrap clearfix">
 							<div class="item_img">
 								<img :src="item.coverImg"/>
@@ -22,8 +25,10 @@
 						</div>					
 					</router-link>
 				</li>
+				
 			</ul>
 		</div>
+		 </scroller>
 	</div>
 </template>
 
@@ -32,17 +37,39 @@
 		name:"categoryList",
 		data(){
 			return{
-				detail:{}
+				detail:[],
+				p:"",
+				page:"",
+				id:"",
+				len:""
 			}
 		},
 		mounted(){
+			this.p=1;
 			this.$http.jsonp("https://h5api.zhefengle.cn/goodvalue/index_choice.html?apiv=3&biz_channel=&historyRecordId=0&limit=8&page=1&token=AT3B06AFlIz-TYGLUSLDl9k&type=1&typeName="+this.$route.query.type).then(function (res) {
 				this.detail = res.body.model.list;
+				this.id= res.body.model.list[0].id;
+				this.len = res.body.model.list.length;			
 			})
+		},
+		methods:{
+			 refresh: function (done) {
+
+      		},
+			infinite:function(done){
+				this.p++;			
+				this.$http.jsonp("https://h5api.zhefengle.cn/goodvalue/index_choice.html?apiv=3&biz_channel=&historyRecordId="+this.id+"&limit=8&page="+this.p+"&token=AT3B06AFlIz-TYGLUSLDl9k&type=1&typeName="+this.$route.query.type).then(function(res){
+					var self = this;
+					setTimeout(function () {
+		                 for (var i = 0; i < self.len; i++) {
+		                   self.detail.push(res.body.model.list[i]);
+		                 }
+		                 done();
+		             }, 1500)
+				})
+			}
 		}
 	}
-	
-	
 </script>
 
 <style>

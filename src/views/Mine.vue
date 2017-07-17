@@ -79,7 +79,7 @@
 		height:100%;
 		position:relative;	
 		background: #fff;	
-		z-index:999;
+		z-index:1001;
 	}
 	.login_top{
 		width:100%;
