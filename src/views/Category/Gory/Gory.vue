@@ -2,7 +2,7 @@
   <div id="detail">
     <div class="title">
       <div class="left">
-        <a href="javascript:void(0)" @click="back()">&lt;</a>
+        <a href="javascript:void(0)" @click="back()">&lt;{{this.$route.query.bb}}</a>
       </div>
       <div class="main">{{this.$route.query.name}}</div>
     </div>
@@ -36,6 +36,10 @@
                 </p>
               </div>
             </router-link>
+          <li :class="{active_btn:iscur==3}">
+          	<router-link :to="{ path:'/screen', query: { cade:this.$route.query.id2} }" :class="{active_btn:iscur==3}" >
+            筛选
+          </router-link>
           </li>
         </ul>
       </div>
@@ -55,6 +59,29 @@
     },
     mounted(){
       this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?biz_channel=&firstCate=0&limit=16&page=1&secondCate="+this.$route.query.id2)
+      this.p=1;
+      if(this.$route.query.bb==2){
+      	this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?activeIndex=4&biz_channel=&brandId=&discountOrder=-1&firstCate=0&keyword=&limit=16&maxPrice="+this.$route.query.max+"&minPrice="+this.$route.query.min+"&page=1&priceOrder=-1&secondCate=70016&sex=0&shopId=&typeName=")
+        .then(function (res) {
+          this.arr3=res.body.model.bannerIntroduce;
+          this.arr4=res.body.model.searchList;
+          this.page=res.body.model.totalPage;
+          for (var i = 0; i < 16; i++) {
+            this.items.push(res.body.model.searchList[i]);
+          }
+        });
+      }else if(this.$route.query.bb==0){
+      	this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?biz_channel=&keyword="+this.$route.query.name+"&limit=16&maskKey=&page=1")
+        .then(function (res) {
+          this.arr3=res.body.model.bannerIntroduce;
+          this.arr4=res.body.model.searchList;
+          this.page=res.body.model.totalPage;
+          for (var i = 0; i < 16; i++) {
+            this.items.push(res.body.model.searchList[i]);
+          }
+        });
+      }
+      this.$http.jsonp("https://h5api.zhefengle.cn/search/item_search_ext.html?biz_channel=&firstCate="+this.$route.query.first+"&limit=16&page=1&secondCate="+this.$route.query.id2)
         .then(function (res) {
           this.arr3=res.body.model.bannerIntroduce;
           this.arr4=res.body.model.searchList

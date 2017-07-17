@@ -14,7 +14,7 @@
 		</div>
 		<scroller 
               :on-infinite="infinite"
-              style="padding-top: 44px;">
+              style="padding-top: 8rem;">
 		<div class="content">
 			<div class="choice" v-for="item in choice">
 				<div class="img_box">
@@ -115,6 +115,7 @@
 </script>
 
 <style scoped="scoped">
+#outer-ynmbj{    margin-top: 8rem;}
 .content{    background: #eee;}
 .tabList{    border-top: 1px solid #eee;padding: .5rem 0;width: 100%;background: #eee;}
 .tag_box{    width: 100%;overflow-x: scroll;}
