@@ -20,6 +20,7 @@ import MostIn from './views/MostIn'
 import Person from './views/Person'
 import Setting from './views/Setting'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import BannerTo from './views/BannerTo'
 import Validator from 'vue-validator'
 import Choiceness from './components/group/Choiceness'
 import Topic from './components/group/Topic'
@@ -28,14 +29,18 @@ import Taglist from'./components/group/Taglist'
 import GoodsInfo from'./components/group/GoodsInfo'
 import TopicChild from'./components/group/TopicChild'
 import UserInfo from './views/UserInfo'
+import Article from './views/Article'
+import CategoryList from './views/CategoryList'
+import Fans from './views/Fans'
 import VueScroller from 'vue-scroller'
+
 Vue.use(VueScroller)
 Vue.use(Validator)
 Vue.config.productionTip = false
-
 Vue.use(VueRouter)
 Vue.use(VueResource)
 Vue.use(VueAwesomeSwiper)
+
 const routes=[
 {path:'',component:Home},
 {path:'/home',component:Home},
@@ -48,6 +53,15 @@ const routes=[
       { path: '/website', component: Website },
     ]
   },
+{path:'/group',component:Group},
+{path:'/mine',component:Mine},
+{path:'/categoryList',component:CategoryList},
+{path:'/Article',component:Article},
+{path:'/mostIn',component:MostIn},
+{path: '/All', component: All },
+{path: '/Detail', component: Detail},
+{path: '/Shopdetail', component: Shopdetail},
+{path: '/Gory', component: Gory },
 { path: '/All', component: All },
 { path: '/Detail', component: Detail },
 { path: '/Shopdetail', component: Shopdetail },
@@ -64,9 +78,11 @@ const routes=[
 ]},
 {path:'/mine',component:Mine},
 {path:'/mostIn',component:MostIn},
+{path:'/bannerTo',component:BannerTo},
 {path:'/person',component:Person},
 {path:'/Setting',component:Setting},
-{path:'/Screen',component:Screen}
+{path:'/Screen',component:Screen},
+{path:'/fans',component:Fans},
 ]
 
 const router=new VueRouter({
