@@ -115,12 +115,14 @@
         <div class="detail-left">
           <a href="">
             <i></i>
-            <p>客服</p>
+            <p><a href="http://t.cn/RtlQbTq">客服</a></p>
           </a>
           <span></span>
           <a href="">
             <i></i>
-            <p>购物车</p>
+            <p>
+            	<a href="http://p.qiao.baidu.com/cps/chatIndex?reqParam=%7B%22from%22%3A0%2C%22sid%22%3A%22-100%22%2C%22tid%22%3A%22-1%22%2C%22ttype%22%3A1%2C%22siteId%22%3A%2210181801%22%2C%22userId%22%3A%2220878133%22%2C%22pageId%22%3A0%7D">购物车</a>
+            </p>
           </a>
           <span></span>
         </div>

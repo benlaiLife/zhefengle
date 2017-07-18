@@ -344,8 +344,8 @@
   height: 100%;
   width: 3.75rem;
   text-align: center;
-  line-height: 1.6rem;
-  font-size: .45rem;
+  /*line-height: 1.6rem;
+  font-size: .45rem;*/
 }
 .detail-buy .detail-left a p {
   color: #999;
